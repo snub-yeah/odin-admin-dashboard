@@ -9,9 +9,14 @@
 
 .container {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: minmax(240px, 14vw) 1fr; /*Creates two columns, one of 250px and one that is a fraction of the screen for the remaining space*/
+    grid-template-rows: auto 1fr; /*Creates two rows, one that is auto height and one that is a fraction of the screen for the remaining space*/
     min-height: 100vh;
+}
+
+.sidebar-text {
+    margin-left: 1.3rem;
+    margin-top: 1rem;
 }
 
 .sidebar {
@@ -66,7 +71,7 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 1rem;
 }
@@ -151,6 +156,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
 .search-input {
@@ -188,6 +195,8 @@
     align-items: center;
     gap: 1rem;
     justify-self: end;
+    margin-right: 3rem;
+    margin-top: 1rem;
 }
 
 .profile-bar {
@@ -196,6 +205,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-left: 2rem;
 }
 
 .profile-bar p {
@@ -211,5 +221,6 @@
     margin-left: auto;
     display: flex;
     gap: 1rem;
+    margin-right: 3rem;
 }
 
