@@ -151,6 +151,8 @@
 
 
 .search-bar {
+    width: 60vw;
+    padding-right: 15vw;
     grid-row: 1;
     grid-column: 1/-1;
     display: flex;
@@ -162,7 +164,7 @@
 
 .search-input {
     width: 100%;
-    max-width: 600px;
+    min-width: 250px;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 20px;
