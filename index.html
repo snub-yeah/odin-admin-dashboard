@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/0b45c9a4b1.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,18 +30,19 @@
         
         <div class="top-bar">
             <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                 <input class="search-input" type="text" placeholder="Search...">
             </div>
             <div class="user-info">
-                <img src="" alt="Notifications">
-                <img src="" alt="User">
+                <i class="fa-regular fa-bell fa-2xl"></i>
+                <img src="./images/pfp.jpg" alt="User" class="user-pfp">
                 <span>Snub</span>
             </div>
             <div class="profile-bar">
-                <img src="" alt="Profile Picture">
+                <img src="./images/pfp.jpg" alt="Profile Picture" class="pfp">
                 <div class="welcome">
                     <p>Hi there,</p>
-                    <h2>Snub (@snub)</h2>
+                    <h2>Snub (@snub-yeah)</h2>
                 </div>
                 <div class="buttons">
                     <button>New</button>
@@ -58,14 +60,14 @@
                         <h3>Street Tracker</h3>
                         <p>Fighting game statistics tracker for Street Fighter 2</p>
                         <div class="card-actions">
-                            <button>Github</button>
+                            <a href="https://github.com/snub-yeah/Street-Tracker-Backend" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                         </div>
                     </div>
                     <div class="project-card">
                         <h3>Personal Website</h3>
                         <p>A personal website made with React. It has a video game theme.</p>
                         <div class="card-actions">
-                            <button>Github</button>
+                            <a href="https://github.com/snub-yeah/Resume-Website" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                         </div>
                     </div>
                     <!-- more projects will go here -->
@@ -76,12 +78,25 @@
                 <h2>Announcements</h2>
                 <div class="announcements-card">
                     <div class="announcement">
-                        <h3>Site Maintenance</h3>
-                        <p>Some maintenance text here...</p>
+                        <h3>Gaming</h3>
+                        <p>I am gaming</p>
                     </div>
-                    <!-- maybe more announcements -->
+                    <div class="announcement">
+                        <h3>More Gaming</h3>
+                        <p>I am doing it again...</p>
+                    </div>
                 </div>
             </div>
+             <!--don't worry, this will be added later :D -->
+            <!-- <div class="trending">
+                <h2>Trending</h2>
+                <div class="trending-card">
+                    <div class="trending-item">
+                        <h3>Snub</h3>
+                        <p>I am gaming</p>
+                    </div>
+                </div>
+            </div> -->
         </main>
     </div>
 </body>
