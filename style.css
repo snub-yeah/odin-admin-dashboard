@@ -23,7 +23,7 @@
     grid-row: 1 / -1;
     grid-column: 1;
     padding: 1rem;
-    background-color: #fe9292;
+    background-color: var(--sidebar-bg);
     z-index: 2;
 }
 
@@ -54,7 +54,6 @@
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
     gap: 1rem;
-    background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1;
@@ -68,7 +67,6 @@
     grid-template-rows: 35vh 1fr;
     gap: 1rem;
     padding: 2rem;
-    background-color: #ecf2f8;
 }
 
 .projects {
@@ -83,7 +81,7 @@
 }
 
 .buttons button {
-    background-color: #fe9292;
+    background-color: var(--sidebar-bg);
     color: #fff;
     border: none;
     margin: 1.3rem;
@@ -99,7 +97,6 @@
 }
 
 .project-card {
-    background: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -124,12 +121,12 @@
 
 .card-actions a{
     text-decoration: none;
-    color: #000;
+    color: var(--font-color);
 }
 
 .project-card:hover {
     box-shadow: 0 4px 8px rgba(58, 56, 175, 0.2);
-    border-color: #33b6f7;
+    border-color: var(--border-hover);
     transform: translateY(-2px);
 }
 
@@ -151,11 +148,13 @@
     gap: 1rem;
 }
 
-.announcements-card {
-    background-color: #fff;
+.announcements-card, .trending-card {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.announcements-card {
     align-self: stretch;
 }
 
@@ -165,10 +164,6 @@
 }
 
 .trending-card {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -204,13 +199,12 @@
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 20px;
-    background-color: #e2e8f0;
     font-size: 1rem;
 }
 
 .search-input:focus {
     outline: none;
-    background-color: #f1f5f9;
+    background-color: var(--search-focus-bg);
     box-shadow: 0 4px 8px rgba(58, 56, 175, 0.2);
 }
 
@@ -260,5 +254,119 @@
     display: flex;
     gap: 1rem;
     margin-right: 3rem;
+}
+
+/*Theme switch button. Shoutout to https://codepen.io/cortez/pen/jOrNGGQ */
+.switch {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin-top: 0.5rem;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #e2e8f0;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #2b2b2b;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+:root {
+    --font-color: #0f0f0f;
+    --bg-color: #fefefe;
+    --sidebar-bg: #f66968;
+    --card-bg: #ffffff;
+    --content-bg: #ecf2f8;
+    --search-bg: #e2e8f0;
+    --search-focus-bg: #f1f5f9;
+    --border-hover: #33b6f7;
+}
+
+[data-theme="dark"] {
+    --font-color: #fefefe;
+    --bg-color: #121212;
+    --sidebar-bg: #f66968;
+    --card-bg: #1e1e1e;
+    --content-bg: #151515;
+    --search-bg: #2d2d2d;
+    --search-focus-bg: #3d3d3d;
+    --border-hover: #1a5a7a;
+}
+
+/* set colors down here, these are dependent on the theme */
+body {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+}
+
+.top-bar,
+.project-card,
+.announcements-card,
+.trending-card {
+    background-color: var(--card-bg);
+}
+
+.content {
+    background-color: var(--content-bg);
+}
+
+.search-input {
+    background-color: var(--search-bg);
+}
+
+.search-input:focus {
+    background-color: var(--search-focus-bg);
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(58, 56, 175, 0.2);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
 }
 
