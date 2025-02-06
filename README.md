@@ -3,6 +3,9 @@
 
 This is a project made as part of The Odin Project. It is an admin dashboard focused on layout and stylization with little focus on functionality. It also has a switch between light and dark theme. The project description can be found on the official [Odin Project site](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard). Enjoy.
 
+## Technologies
+This site is made mostly with vanilla HTML, CSS, and JavaScript. It uses Google Fonts and Font Awesome for a bit of extra swag.
+
 ### Light Theme Screenshot
 ![Light theme page](https://github.com/snub-yeah/odin-admin-dashboard/blob/main/images/Admin_Light.png?raw=true)
 ### Dark Theme Screenshot
