@@ -15,3 +15,5 @@ A short demo video of the site being used can be found [here](https://www.youtub
 ![Light theme page](https://github.com/snub-yeah/odin-admin-dashboard/blob/main/images/Admin_Light.png?raw=true)
 ### Dark Theme Screenshot
 ![Dark Theme Page](https://github.com/snub-yeah/odin-admin-dashboard/blob/main/images/Admin_Dark.png?raw=true)
+#### Future Plans
+Not totally sure. I might actualy make the search bar do something. Potentially, something funny.
