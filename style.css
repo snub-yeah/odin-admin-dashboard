@@ -15,35 +15,51 @@
 }
 
 .sidebar-text {
-    margin-left: 1.3rem;
     margin-top: 1rem;
+}
+
+.sidebar-title {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .sidebar {
     grid-row: 1 / -1;
     grid-column: 1;
-    padding: 1rem;
     background-color: var(--sidebar-bg);
     z-index: 2;
 }
 
 .sidebar h1 {
-    color: #fff;
+    color: var(--sidebar-text);
 }
 
 .sidebar a {
-    color: #fff;
+    color: var(--sidebar-text);
     text-decoration: none;
     display: block;
-    padding: 0.8rem;
-    border-radius: 5px;
+    padding: 2rem;
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    gap: 0.5rem;
     margin-top: 2rem;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-item a {
+    width: 100%;
+    display: block;
+    padding: 0.8rem 1.2rem;
+}
+
+.menu-item:hover {
+    background-color: var(--slightly-darker-sidebar-bg);
+    color: var(--sidebar-text);
 }
 
 .top-bar {
@@ -83,7 +99,7 @@
 
 .buttons button {
     background-color: var(--sidebar-bg);
-    color: #fff;
+    color: var(--sidebar-text);
     border: none;
     margin: 1.3rem;
     transform: scale(1.5);
@@ -93,6 +109,7 @@
 
 .buttons button:hover {
     cursor: pointer;
+    background-color: var(--slightly-darker-sidebar-bg);
     transform: scale(1.6);
     transition: all 0.2s ease;
 }
@@ -162,7 +179,7 @@
 
 .announcement {
     padding: 0.7rem;
-    border-bottom: 1px solid #fe9292;
+    border-bottom: 1px solid var(--sidebar-bg);
 }
 
 .trending-card {
@@ -318,23 +335,27 @@ input:checked + .slider:before {
 :root {
     --font-color: #0f0f0f;
     --bg-color: #fefefe;
-    --sidebar-bg: #f66968;
+    --sidebar-bg: #f4527d;
+    --slightly-darker-sidebar-bg: #ec4874;
     --card-bg: #ffffff;
     --content-bg: #ecf2f8;
     --search-bg: #e2e8f0;
     --search-focus-bg: #f1f5f9;
     --border-hover: #33b6f7;
+    --sidebar-text: #000000;
 }
 
 [data-theme="dark"] {
     --font-color: #fefefe;
     --bg-color: #121212;
-    --sidebar-bg: #f66968;
+    --sidebar-bg: #ba2c54;
+    --slightly-darker-sidebar-bg: #ac254b;
     --card-bg: #1e1e1e;
     --content-bg: #151515;
     --search-bg: #2d2d2d;
     --search-focus-bg: #3d3d3d;
     --border-hover: #1a5a7a;
+    --sidebar-text: #ffffff;
 }
 
 /* set colors down here, these are dependent on the theme */
