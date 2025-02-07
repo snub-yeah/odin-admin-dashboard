@@ -17,3 +17,5 @@ A short demo video of the site being used can be found [here](https://www.youtub
 ![Dark Theme Page](https://github.com/snub-yeah/odin-admin-dashboard/blob/main/images/Admin_Dark.png?raw=true)
 #### Future Plans
 Not totally sure. I might actualy make the search bar do something. Potentially, something funny.
+#### What I learned
+I learned a lot about using grids and other CSS tools to make stuff more organized. This is also probably the first site I've made that responds well to being resized.
